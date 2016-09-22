@@ -571,6 +571,7 @@ git config --global user.email "$(whoami)@gmail.com"
 
 update
 
+sudo chmod -R 777 /usr/local/share/zsh
 echo "$1" | sudo -S sh -c "echo '$(which zsh)' >> /etc/shells"
 chsh -s $(which zsh);
 echo "$1" | sudo -S open ./monokai.terminal
