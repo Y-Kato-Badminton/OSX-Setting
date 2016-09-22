@@ -253,6 +253,7 @@ install_package coreutils ' --with-gmp'
 install_package tree ''
 install_package maven ''
 install_package lua ' --universal --with-completion'
+install_package ag ' --HEAD'
 install_package ranger ''
 install_package go ''
 install_package ocaml ' --with-flambda --with-x11'
@@ -565,7 +566,7 @@ brew_init
 #apm install --packages-file ./packages.list
 
 git config --global user.name "$(whoami)"
-git config --global user.email "$(whoami)@mailhost.com"
+git config --global user.email "$(whoami)@gmail.com"
 
 update
 
