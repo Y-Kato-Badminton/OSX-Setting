@@ -536,6 +536,7 @@ install_cask_package appcleaner ''
 install_cask_package appcode ''
 install_cask_package arduino ''
 install_cask_package atom ''
+install_cask_package bettertouchtool ''
 echo "$1" | sudo -S chmod -R 777 $HOME/.atom 
 install_cask_package ccleaner ''
 install_cask_package clion ''
