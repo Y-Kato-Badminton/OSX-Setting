@@ -258,7 +258,7 @@ install_package ranger ''
 install_package go ''
 install_package ocaml ' --with-flambda --with-x11'
 install_package llvm ' --universal --with-all-targets --with-graphviz --with-clang --with-ocaml --with-python --with-shared-libs --with-toolchain --HEAD'
-install_package mariadb ' --universal --with-archive-storage-engine --with-bench --with-blackhole-storage-engine --with-embedded --with-libedit --with-local-infile --devel'
+install_package mariadb ''
 
 # Go設定
 go get -u -v github.com/Masterminds/glide
