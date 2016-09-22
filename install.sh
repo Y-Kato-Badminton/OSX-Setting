@@ -556,8 +556,9 @@ install_cask_package rubymine ''
 install_cask_package skype ''
 install_cask_package slack ''
 install_cask_package tunnelblick ''
-install_cask_package vagrant ''
 install_cask_package virtualbox ''
+vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
+install_cask_package vagrant ''
 install_cask_package vmware-fusion ''
 install_cask_package webstorm ''
 
