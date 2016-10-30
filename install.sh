@@ -117,7 +117,7 @@ killall Dock
 echo "$1" | sudo -S chmod -R 777 /var/tmp/;
 echo "$1" | sudo -S chown -R $(whoami) /usr/local;
 
-git clone https://github.com/Y-Kato-Badminton/dotfiles
+git clone https://github.com/kpango/dotfiles
 
 rm -rf $HOME/.zshrc;
 cp ./dotfiles/zshrc $HOME/.zshrc;
@@ -355,6 +355,8 @@ git clone https://github.com/php-build/php-build $HOME/.anyenv/envs/phpenv/plugi
 git clone https://github.com/ngyuki/phpenv-composer.git $HOME/.anyenv/envs/phpenv/plugins/phpenv-composer
 
 $HOME/.anyenv/envs/phpenv/bin/phpenv install -l
+
+sed -i -e "1i configure_option -D "--with-mysql"" $HOME/.anyenv/envs/phpenv/plugins/php-build/share/php-build/definitions/master
 
 PHP_BUILD_CONFIGURE_OPTS='--with-openssl=/usr/local/Cellar/openssl/*' $HOME/.anyenv/envs/phpenv/bin/phpenv install master --deep-clean
 
