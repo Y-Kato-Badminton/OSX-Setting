@@ -356,7 +356,7 @@ git clone https://github.com/ngyuki/phpenv-composer.git $HOME/.anyenv/envs/phpen
 
 $HOME/.anyenv/envs/phpenv/bin/phpenv install -l
 
-sed -i -e "1i configure_option -D "--with-mysql"" $HOME/.anyenv/envs/phpenv/plugins/php-build/share/php-build/definitions/master
+sed -i -e "1i configure_option -D \"--with-mysql\"" $HOME/.anyenv/envs/phpenv/plugins/php-build/share/php-build/definitions/master
 
 PHP_BUILD_CONFIGURE_OPTS='--with-openssl=/usr/local/Cellar/openssl/*' $HOME/.anyenv/envs/phpenv/bin/phpenv install master --deep-clean
 
