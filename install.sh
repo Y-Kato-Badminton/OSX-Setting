@@ -337,9 +337,9 @@ reload_anyenv
 $HOME/.anyenv/envs/pyenv/shims/pip install --upgrade pip;
 $HOME/.anyenv/envs/pyenv/shims/pip2 install --upgrade pip;
 $HOME/.anyenv/envs/pyenv/shims/pip3 install --upgrade pip;
-$HOME/.anyenv/envs/pyenv/shims/pip install --upgrade websocket-client sexpdata neovim
-$HOME/.anyenv/envs/pyenv/shims/pip2 install --upgrade websocket-client sexpdata neovim
-$HOME/.anyenv/envs/pyenv/shims/pip3 install --upgrade websocket-client sexpdata neovim
+$HOME/.anyenv/envs/pyenv/shims/pip install --upgrade websocket-client sexpdata neovim vim-vint
+$HOME/.anyenv/envs/pyenv/shims/pip2 install --upgrade websocket-client sexpdata neovim vim-vint
+$HOME/.anyenv/envs/pyenv/shims/pip3 install --upgrade websocket-client sexpdata neovim vim-vint
 
 echo "$1" | sudo -S pip install git+https://github.com/idcf/cloudstack-api
 
