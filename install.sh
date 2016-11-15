@@ -526,6 +526,7 @@ cd
 curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=nightly
 /usr/local/bin/cargo install --git https://github.com/phildawes/racer.git
 /usr/local/bin/cargo install --git https://github.com/rust-lang-nursery/rustfmt
+/usr/local/bin/cargo install ripgrep
 
 
 nvim +UpdateRemotePlugins +PlugInstall +PlugUpdate +PlugUpgrade +PlugClean +GoInstallBinaries +GoUpdateBinaries +qall
