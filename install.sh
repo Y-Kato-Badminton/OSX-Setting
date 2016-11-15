@@ -406,7 +406,7 @@ $HOME/.anyenv/envs/ndenv/bin/ndenv global v6.4.0
 
 reload_anyenv
 
-$HOME/.anyenv/envs/ndenv/shims/npm install -g less jsctags js-beautify eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y eslint babel-eslint
+$HOME/.anyenv/envs/ndenv/shims/npm install -g less jsctags js-beautify eslint eslint_d babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
 
 # Erlang設定
 install_package unixodbc '  --universal'
