@@ -366,6 +366,8 @@ $HOME/.anyenv/envs/phpenv/bin/phpenv rehash
 
 $HOME/.anyenv/envs/phpenv/plugins/phpenv-composer/libexec/composer
 
+composer global require mkusher/padawan
+
 # Ruby設定
 echo "$1" | sudo -S rm -rf /usr/bin/ruby
 
