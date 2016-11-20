@@ -1,4 +1,4 @@
-
+cask_args appdir: '/Applications'
 tap 'caskroom/cask'
 tap 'dart-lang/dart'
 tap 'homebrew/bundle'
