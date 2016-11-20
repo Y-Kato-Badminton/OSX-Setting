@@ -452,7 +452,7 @@ nimble install nimsuggest
 cd
 
 # Install Rust
-curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=nightly
+curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --prefix=/usr/local --channel=nightly
 /usr/local/bin/cargo install --git https://github.com/phildawes/racer.git
 /usr/local/bin/cargo install --git https://github.com/rust-lang-nursery/rustfmt
 /usr/local/bin/cargo install ripgrep
