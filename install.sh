@@ -157,9 +157,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
 
-brew tap caskroom/cask
-brew tap homebrew/versions
-brew tap homebrew/dupes
+brew tap homebrew/bundle
 
 brew_init() {
     echo Initializing Brew
@@ -170,20 +168,6 @@ brew_init() {
 }
 
 brew_init
-
-install_package() {
-    echo EXECUTING: brew install $1 $2
-    brew install $1 $2
-    [ $? -ne 0 ] && failed_items="failed_items $1" # package failed to install.
-}
-
-failed_items=""
-
-install_cask_package() {
-    echo EXECUTING: brew cask install $1
-    brew cask install $1
-    [ $? -ne 0 ] && failed_items="failed_items $1"  # package failed to install.
-}
 
 reload_anyenv() {
     export PROGRAMMING=$HOME/Documents/Programming;
@@ -200,65 +184,7 @@ reload_anyenv() {
     fi
 }
 
-install_package xz '  --universal'
-install_package pkg-config ''
-install_package makedepend ''
-install_package libressl ''
-install_package openssl '  --universal'
-brew link openssl --force
-install_package autoconf ''
-install_package automake ''
-install_package libtool '  --universal'
-install_package pcre '  --universal'
-install_package readline ''
-brew link readline --force
-
-brew tap caskroom/cask
-install_cask_package java ''
-
-install_package gettext '  --universal'
-install_package git '  --HEAD'
-install_package wget '  --with-libressl --with-pcre'
-install_package gdbm '  --universal --with-libgdbm-compat'
-install_package zsh ''
-install_package cmake '  --with-completion --without-docs --HEAD'
-install_package sphinx-doc ''
-install_package neovim/neovim/neovim '  --HEAD'
-install_package ctags ''
-install_package jpeg '  --universal'
-install_package libpng '  --universal'
-install_package libffi ''
-install_package freetype '  --universal'
-install_package re2c ''
-install_package mhash ''
-install_package mcrypt ''
-install_package mercurial ''
-install_package bison ''
-brew link bison --force
-install_package tig ''
-install_package doxygen ' --HEAD'
-install_package libevent ' --HEAD'
-install_package tmux ' --HEAD'
-install_package oniguruma ''
-install_package jq ''
-install_package libssh2 ' --with-libressl --HEAD'
-install_cask_package xquartz ''
-install_package graphviz '  --with-freetype --with-x11 -HEAD'
-install_package sourcekitten ' --HEAD'
-install_package ag ' --HEAD'
-install_package axel ' --HEAD'
-install_package texinfo ''
-install_package gmp ' --c++11'
-install_package coreutils ' --with-gmp'
-install_package tree ''
-install_package maven ''
-install_package lua ' --universal --with-completion'
-install_package ag ' --HEAD'
-install_package ranger ''
-install_package go ''
-install_package ocaml ' --with-flambda --with-x11'
-install_package llvm ' --universal --with-all-targets --with-graphviz --with-clang --with-ocaml --with-python --with-shared-libs --with-toolchain --HEAD'
-install_package mariadb ''
+brew bundle
 
 # Go設定
 go get -u github.com/Masterminds/glide
@@ -348,8 +274,6 @@ $HOME/.anyenv/envs/pyenv/shims/pip3 install --upgrade websocket-client sexpdata 
 echo "$1" | sudo -S pip install git+https://github.com/idcf/cloudstack-api
 
 # PHP設定
-install_package libxml2 '  --universal --with-python --HEAD'
-brew link --force libxml2
 
 $HOME/.anyenv/bin/anyenv install phpenv
 
@@ -374,11 +298,6 @@ composer global require mkusher/padawan
 
 # Ruby設定
 echo "$1" | sudo -S rm -rf /usr/bin/ruby
-
-install_package libiconv '  --universal'
-brew link --force libiconv
-install_package libxslt ''
-brew link --force libxslt
 
 $HOME/.anyenv/bin/anyenv install rbenv
 
@@ -415,10 +334,6 @@ reload_anyenv
 $HOME/.anyenv/envs/ndenv/shims/npm install -g less jsctags js-beautify eslint eslint_d babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y
 
 # Erlang設定
-install_package unixodbc '  --universal'
-install_package libtiff ' --universal'
-install_package wxmac '  --universal --with-static --with-stl'
-install_package fop '  --universal'
 
 $HOME/.anyenv/bin/anyenv install erlenv
 
@@ -492,8 +407,6 @@ $HOME/.anyenv/envs/playenv/bin/playenv rehash
 
 reload_anyenv
 
-install_package ghc ''
-
 # anyenv install hsenv Haskell の開発にはStackを使うこと! https://github.com/commercialhaskell/stack
 curl -sSL https://get.haskellstack.org/ | sh
 
@@ -537,39 +450,7 @@ curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=nightly
 
 nvim +UpdateRemotePlugins +PlugInstall +PlugUpdate +PlugUpgrade +PlugClean +GoInstallBinaries +GoUpdateBinaries +qall
 
-# Install Brew Casks
-install_package shellcheck ''
-
-install_cask_package alfred ''
-install_cask_package android-studio ''
-install_cask_package appcleaner ''
-install_cask_package appcode ''
-install_cask_package arduino ''
-install_cask_package atom ''
-install_cask_package bettertouchtool ''
-echo "$1" | sudo -S chmod -R 777 $HOME/.atom 
-install_cask_package ccleaner ''
-install_cask_package clion ''
-install_cask_package dash ''
-install_cask_package eclipse-jee ''
-install_cask_package evernote ''
-install_cask_package google-chrome ''
-install_cask_package google-drive ''
-install_cask_package intellij-idea ''
-install_cask_package mysqlworkbench ''
-install_cask_package netbeans ''
-install_cask_package onyx ''
-install_cask_package phpstorm ''
-install_cask_package pycharm ''
-install_cask_package rubymine ''
-install_cask_package skype ''
-install_cask_package slack ''
-install_cask_package tunnelblick ''
-install_cask_package virtualbox ''
 vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
-install_cask_package vagrant ''
-install_cask_package vmware-fusion ''
-install_cask_package webstorm ''
 
 brew_init
 
