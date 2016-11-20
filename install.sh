@@ -261,29 +261,36 @@ install_package llvm ' --universal --with-all-targets --with-graphviz --with-cla
 install_package mariadb ''
 
 # Go設定
-go get -u -v github.com/Masterminds/glide
-go get -u -v github.com/alecthomas/gometalinter
-go get -u -v github.com/golang/lint/golint
-go get -u -v github.com/jstemmer/gotags
-go get -u -v github.com/kisielk/gotool
-go get -u -v github.com/mattn/files
-go get -u -v github.com/mattn/jvgrep
-go get -u -v github.com/motemen/go-iferr/cmd/goiferr
-go get -u -v github.com/nsf/gocode
-go get -u -v github.com/peco/peco/cmd/peco
-go get -u -v github.com/zmb3/gogetdoc
-go get -u -v golang.org/x/tools/cmd/cover
-go get -u -v golang.org/x/tools/cmd/godef
-go get -u -v golang.org/x/tools/cmd/godoc
-go get -u -v golang.org/x/tools/cmd/goimports
-go get -u -v golang.org/x/tools/cmd/gorename
-go get -u -v golang.org/x/tools/cmd/guru
-go get -u -v golang.org/x/tools/cmd/oracle
-go get -u -v golang.org/x/tools/cmd/vet
-go get -u -v sourcegraph.com/sqs/goreturns
+go get -u github.com/Masterminds/glide
+go get -u github.com/aarzilli/gdlv
+go get -u github.com/alecthomas/gometalinter
+go get -u github.com/constabulary/gb/...
+go get -u github.com/cweill/gotests/...
+go get -u github.com/derekparker/delve/cmd/dlv
+go get -u github.com/garyburd/go-explorer/src/getool
+go get -u github.com/golang/lint/golint
+go get -u github.com/jstemmer/gotags
+go get -u github.com/kisielk/gotool
+go get -u github.com/mattn/files
+go get -u github.com/mattn/jvgrep
+go get -u github.com/motemen/go-iferr/cmd/goiferr
+go get -u github.com/nsf/gocode
+go get -u github.com/peco/peco/cmd/peco
+go get -u github.com/rogpeppe/godef
+go get -u github.com/zmb3/gogetdoc
+go get -u golang.org/x/tools/cmd/cover
+go get -u golang.org/x/tools/cmd/godoc
+go get -u golang.org/x/tools/cmd/goimports
+go get -u golang.org/x/tools/cmd/gorename
+go get -u sourcegraph.com/sqs/goreturns
 
 go install github.com/Masterminds/glide
+go install github.com/aarzilli/gdlv
 go install github.com/alecthomas/gometalinter
+go install github.com/constabulary/gb/...
+go install github.com/cweill/gotests
+go install github.com/derekparker/delve/cmd/dlv
+go install github.com/garyburd/go-explorer/src/getool
 go install github.com/golang/lint/golint
 go install github.com/jstemmer/gotags
 go install github.com/kisielk/gotool
@@ -291,15 +298,12 @@ go install github.com/mattn/jvgrep
 go install github.com/motemen/go-iferr/cmd/goiferr
 go install github.com/nsf/gocode
 go install github.com/peco/peco/cmd/peco
+go install github.com/rogpeppe/godef
 go install github.com/zmb3/gogetdoc
 go install golang.org/x/tools/cmd/cover
-go install golang.org/x/tools/cmd/godef
 go install golang.org/x/tools/cmd/godoc
 go install golang.org/x/tools/cmd/goimports
 go install golang.org/x/tools/cmd/gorename
-go install golang.org/x/tools/cmd/guru
-go install golang.org/x/tools/cmd/oracle
-go install golang.org/x/tools/cmd/vet
 go install sourcegraph.com/sqs/goreturns
 
 $GOPATH/bin/gocode set autobuild true
