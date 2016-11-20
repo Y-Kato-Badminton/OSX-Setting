@@ -185,6 +185,16 @@ reload_anyenv() {
 }
 
 brew bundle
+brew link --force openssl
+brew link --force readline
+brew link --force bison
+brew link --force libxml2
+brew link --force libiconv
+brew link --force libxslt
+
+vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
+
+echo "$1" | sudo -S chmod -R 777 $HOME/.atom 
 
 # Go設定
 go get -u github.com/Masterminds/glide
@@ -449,8 +459,6 @@ curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --channel=nightly
 
 
 nvim +UpdateRemotePlugins +PlugInstall +PlugUpdate +PlugUpgrade +PlugClean +GoInstallBinaries +GoUpdateBinaries +qall
-
-vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
 
 brew_init
 
