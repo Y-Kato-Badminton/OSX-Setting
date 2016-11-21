@@ -459,6 +459,7 @@ curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --prefix=/usr/local 
 
 
 nvim +UpdateRemotePlugins +PlugInstall +PlugUpdate +PlugUpgrade +PlugClean +GoInstallBinaries +GoUpdateBinaries +qall
+wget -P $HOME/.config/nvim/plugged/nvim-go/syntax/ https://raw.githubusercontent.com/fatih/vim-go/master/syntax/go.vim
 
 brew_init
 
