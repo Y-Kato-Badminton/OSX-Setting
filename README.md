@@ -3,7 +3,7 @@
 my OSX Setting Script
 
 ## Description
-dotfiles ( https://github.com/Y-Kato-Badminton/dotfiles )
+dotfiles ( https://github.com/kpango/dotfiles )
 
 - neovim (https://neovim.io)
   - vim-plug (https://github.com/junegunn/vim-plug)
@@ -34,7 +34,7 @@ dotfiles ( https://github.com/Y-Kato-Badminton/dotfiles )
 
 ## Install
 ```shell
-git clone https://github.com/Y-Kato-Badminton/OSX-Setting
+git clone https://github.com/kpango/OSX-Setting
 cd OSX-Setting
 sh ./install.sh {your password}
 cd ../
@@ -42,7 +42,7 @@ rm -rf OSX-Setting
 ```
 
 ## Contribution
-1. Fork it ( http://github.com/Y-Kato-Badminton/OSX-Setting/fork )
+1. Fork it ( http://github.com/kpango/OSX-Setting/fork )
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
@@ -50,4 +50,4 @@ rm -rf OSX-Setting
 
 ## Author
 
-[Y-Kato-Badminton](https://github.com/Y-Kato-Badminton)
+[kpango](https://github.com/kpango)
