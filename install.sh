@@ -349,16 +349,16 @@ $HOME/.anyenv/bin/anyenv install erlenv
 
 reload_anyenv
 
-wget http://www.erlang.org/download/otp_src_19.0.tar.gz
-tar zxf otp_src_19.0.tar.gz
-cd otp_src_19.0
-./configure --enable-dynamic-ssl-lib --with-ssl=/usr/local/opt/openssl --prefix=$HOME/.anyenv/envs/erlenv/releases/19.0
+wget http://www.erlang.org/download/otp_src_19.1.tar.gz
+tar zxf otp_src_19.1.tar.gz
+cd otp_src_19.1
+./configure --enable-dynamic-ssl-lib --with-ssl=/usr/local/opt/openssl --prefix=$HOME/.anyenv/envs/erlenv/releases/19.1
 make -j 4
 make install
 cd
-rm -rf otp_src_19.0*
+rm -rf otp_src_19.1*
 
-$HOME/.anyenv/envs/erlenv/bin/erlenv global 19.0
+$HOME/.anyenv/envs/erlenv/bin/erlenv global 19.1
 $HOME/.anyenv/envs/erlenv/bin/erlenv rehash
 
 reload_anyenv
@@ -381,8 +381,8 @@ $HOME/.anyenv/bin/anyenv install crenv
 reload_anyenv
 
 $HOME/.anyenv/envs/crenv/bin/crenv install -l
-$HOME/.anyenv/envs/crenv/bin/crenv install 0.18.7
-$HOME/.anyenv/envs/crenv/bin/crenv global 0.18.7
+$HOME/.anyenv/envs/crenv/bin/crenv install 0.20.0
+$HOME/.anyenv/envs/crenv/bin/crenv global 0.20.0
 $HOME/.anyenv/envs/crenv/bin/crenv rehash
 
 reload_anyenv
@@ -404,8 +404,8 @@ $HOME/.anyenv/envs/sbtenv/bin/sbtenv rehash
 reload_anyenv
 
 $HOME/.anyenv/envs/scalaenv/bin/scalaenv install -l
-$HOME/.anyenv/envs/scalaenv/bin/scalaenv install scala-2.12.0-M4
-$HOME/.anyenv/envs/scalaenv/bin/scalaenv global scala-2.12.0-M4
+$HOME/.anyenv/envs/scalaenv/bin/scalaenv install scala-2.12.0-M5
+$HOME/.anyenv/envs/scalaenv/bin/scalaenv global scala-2.12.0-M5
 $HOME/.anyenv/envs/scalaenv/bin/scalaenv rehash
 
 reload_anyenv
