@@ -162,7 +162,7 @@ brew tap homebrew/bundle
 brew_init() {
     echo Initializing Brew
     brew update
-    brew upgrade --all
+    brew upgrade
     brew cleanup
     brew linkapps
 }
