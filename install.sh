@@ -336,8 +336,8 @@ $HOME/.anyenv/bin/anyenv install ndenv
 reload_anyenv
 
 $HOME/.anyenv/envs/ndenv/bin/ndenv install -l
-$HOME/.anyenv/envs/ndenv/bin/ndenv install v6.4.0
-$HOME/.anyenv/envs/ndenv/bin/ndenv global v6.4.0
+$HOME/.anyenv/envs/ndenv/bin/ndenv install v7.2.0
+$HOME/.anyenv/envs/ndenv/bin/ndenv global v7.2.0
 
 reload_anyenv
 
