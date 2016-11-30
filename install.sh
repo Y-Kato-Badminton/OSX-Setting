@@ -4,6 +4,8 @@ echo "$1" | sudo -S -v
 
 while true; do echo "$1" | sudo -S -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
+xcode-select --install
+
 echo "$1" | sudo -S pmset -a standbydelay 86400
 
 echo "$1" | sudo -S pmset -a hibernatemode 0
