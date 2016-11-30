@@ -62,6 +62,7 @@ defaults write com.apple.dock orientation -string "right"
 defaults write com.apple.dock autohide -bool true
 
 defaults write -g InitialKeyRepeat -int 13
+defaults write -g KeyRepeat -int 1
 
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
