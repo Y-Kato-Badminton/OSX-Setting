@@ -29,6 +29,7 @@ brew 'libffi'
 brew 'ocaml', args: ['with-flambda', 'with-x11']
 brew 'gdbm', args: ['universal', 'with-libgdbm-compat']
 brew 'readline'
+brew 'mpfr'
 brew 'sqlite'
 brew 'python'
 brew 'llvm', args: ['HEAD', 'universal', 'with-all-targets', 'with-graphviz', 'with-ocaml', 'with-python', 'with-shared-libs', 'with-toolchain']
