@@ -64,7 +64,7 @@ brew 'libyaml'
 brew 'llvm', args: ['HEAD', 'universal', 'with-all-targets', 'with-graphviz', 'with-ocaml', 'with-python', 'with-shared-libs', 'with-toolchain']
 brew 'lua', args: ['universal', 'with-completion']
 brew 'makedepend'
-brew 'mariadb'
+brew 'mariadb', restart_service: true
 brew 'mas'
 brew 'maven'
 brew 'mhash'
