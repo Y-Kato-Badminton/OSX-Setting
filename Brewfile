@@ -32,28 +32,31 @@ brew 'cmake', args: ['HEAD', 'with-completion', 'without-docs']
 brew 'coreutils', args: ['with-gmp']
 brew 'ctags'
 brew 'doxygen', args: ['HEAD']
-brew 'fop'
 brew 'libpng', args: ['universal']
 brew 'freetype', args: ['universal']
+brew 'fontconfig', args: ['universal']
+brew 'fop'
 brew 'readline'
 brew 'gawk'
+brew 'jpeg', args: ['universal']
+brew 'libtiff', args: ['universal']
+brew 'webp'
+brew 'gd', args: ['universal']
 brew 'gdbm', args: ['universal', 'with-libgdbm-compat']
 brew 'go'
 brew 'gradle'
+brew 'libtool', args: ['universal']
 brew 'graphviz', args: ['universal', 'with-freetype', 'with-x11']
 brew 'haskell-stack'
 brew 'heroku'
 brew 'icu4c', args: ['c++11', 'universal']
 brew 'jetty'
-brew 'jpeg', args: ['universal']
 brew 'oniguruma'
 brew 'jq'
 brew 'libffi'
 brew 'libressl'
 brew 'libssh2', args: ['HEAD', 'with-libressl']
 brew 'libtermkey'
-brew 'libtiff', args: ['universal']
-brew 'libtool', args: ['universal']
 brew 'libuv'
 brew 'libvterm'
 brew 'sqlite'
@@ -79,6 +82,7 @@ brew 'pkg-config'
 brew 'protobuf'
 brew 'ranger'
 brew 're2c'
+brew 'reattach-to-user-namespace', args: ['HEAD', 'with-wrap-launchctl', 'with-wrap-pbcopy-and-pbpaste']
 brew 'shellcheck'
 brew 'sourcekitten', args: ['HEAD']
 brew 'sphinx-doc'
