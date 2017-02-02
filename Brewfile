@@ -79,7 +79,6 @@ brew 'libuv'
 brew 'libvterm'
 brew 'libxslt'
 brew 'libyaml'
-brew 'llvm', args: ['universal', 'with-graphviz', 'with-ocaml', 'with-python', 'with-toolchain']
 brew 'lua', args: ['universal', 'with-completion']
 brew 'makedepend'
 brew 'mariadb', restart_service: true
@@ -99,7 +98,6 @@ brew 'ranger'
 brew 're2c'
 brew 'reattach-to-user-namespace', args: ['HEAD', 'with-wrap-launchctl', 'with-wrap-pbcopy-and-pbpaste']
 brew 'shellcheck'
-brew 'sourcekitten', args: ['HEAD']
 brew 'sphinx-doc'
 brew 'texinfo'
 brew 'xz', args: ['universal']
@@ -157,6 +155,8 @@ cask 'webstorm'
 mas 'BetterSnapTool', id: 417375580
 mas 'Pages', id: 409201541
 mas 'Xcode', id: 497799835
+brew 'llvm', args: ['universal', 'with-graphviz', 'with-ocaml', 'with-python', 'with-toolchain']
+brew 'sourcekitten', args: ['HEAD']
 mas 'Keynote', id: 409183694
 mas 'FreeMan', id: 510934532
 mas 'LINE', id: 539883307
