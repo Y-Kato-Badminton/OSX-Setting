@@ -152,6 +152,7 @@ cask 'vagrant'
 cask 'virtualbox'
 cask 'visual-studio-code'
 cask 'vmware-fusion'
+cask 'vysor'
 cask 'webstorm'
 mas 'BetterSnapTool', id: 417375580
 mas 'Pages', id: 409201541
