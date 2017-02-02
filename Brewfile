@@ -10,6 +10,10 @@ tap 'homebrew/versions'
 tap 'neovim/neovim'
 cask 'java'
 cask 'xquartz'
+brew 'android-sdk'
+brew 'clasp'
+brew 'gringo'
+brew 'aspcud'
 brew 'autoconf'
 brew 'automake'
 brew 'gettext', args: ['universal']
@@ -27,6 +31,9 @@ brew 'open-mpi', args: ['c++11', 'with-cxx-bindings', 'with-java', 'with-mpi-thr
 brew 'boost', args: ['c++11', 'with-icu4c', 'with-mpi', 'without-single']
 brew 'ghc'
 brew 'cabal-install'
+brew 'ocaml', args: ['with-flambda', 'with-x11']
+brew 'ocamlbuild'
+brew 'camlp4'
 brew 'carthage'
 brew 'cmake', args: ['HEAD', 'with-completion', 'without-docs']
 brew 'coreutils', args: ['with-gmp']
@@ -50,6 +57,17 @@ brew 'graphviz', args: ['universal', 'with-freetype', 'with-x11']
 brew 'haskell-stack'
 brew 'heroku'
 brew 'icu4c', args: ['c++11', 'universal']
+brew 'sqlite'
+brew 'python'
+brew 'libxml2', args: ['HEAD', 'universal', 'with-python']
+brew 'libplist', args: ['HEAD']
+brew 'libtasn1', args: ['universal']
+brew 'libusb', args: ['universal', 'HEAD']
+brew 'usbmuxd'
+brew 'libimobiledevice'
+brew 'libzip', args: ['universal']
+brew 'ideviceinstaller'
+brew 'ios-deploy'
 brew 'jetty'
 brew 'oniguruma'
 brew 'jq'
@@ -59,12 +77,9 @@ brew 'libssh2', args: ['HEAD', 'with-libressl']
 brew 'libtermkey'
 brew 'libuv'
 brew 'libvterm'
-brew 'sqlite'
-brew 'python'
-brew 'libxml2', args: ['HEAD', 'universal', 'with-python']
 brew 'libxslt'
 brew 'libyaml'
-brew 'llvm', args: ['HEAD', 'universal', 'with-all-targets', 'with-graphviz', 'with-ocaml', 'with-python', 'with-shared-libs', 'with-toolchain']
+brew 'llvm', args: ['universal', 'with-graphviz', 'with-ocaml', 'with-python', 'with-toolchain']
 brew 'lua', args: ['universal', 'with-completion']
 brew 'makedepend'
 brew 'mariadb', restart_service: true
@@ -75,7 +90,7 @@ brew 'mcrypt'
 brew 'mercurial'
 brew 'msgpack'
 brew 'nkf'
-brew 'ocaml', args: ['with-flambda', 'with-x11']
+brew 'opam'
 brew 'pacvim'
 brew 'pcre', args: ['universal']
 brew 'pkg-config'
@@ -102,14 +117,6 @@ brew 'cloudfoundry/tap/cf-cli'
 brew 'dart-lang/dart/dart', args: ['devel', 'with-content-shell', 'with-dartium']
 brew 'homebrew/dupes/libiconv', args: ['universal']
 brew 'neovim/neovim/neovim', args: ['HEAD']
-brew 'libzip', args: ['universal']
-brew 'libtasn1', args: ['universal']
-brew 'libplist', args: ['HEAD']
-brew 'libusb', args: ['universal', 'HEAD']
-brew 'usbmuxd'
-brew 'libimobiledevice'
-brew 'ideviceinstaller'
-brew 'ios-deploy'
 cask 'alfred'
 cask 'android-studio'
 cask 'appcleaner'
