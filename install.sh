@@ -200,50 +200,7 @@ vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
 echo "$1" | sudo -S chmod -R 777 $HOME/.atom 
 
 # Go設定
-go get -u github.com/Masterminds/glide
-go get -u github.com/aarzilli/gdlv
-go get -u github.com/alecthomas/gometalinter
-go get -u github.com/constabulary/gb/...
-go get -u github.com/cweill/gotests/...
-go get -u github.com/derekparker/delve/cmd/dlv
-go get -u github.com/garyburd/go-explorer/src/getool
-go get -u github.com/golang/lint/golint
-go get -u github.com/jstemmer/gotags
-go get -u github.com/kisielk/gotool
-go get -u github.com/mattn/files
-go get -u github.com/mattn/jvgrep
-go get -u github.com/motemen/go-iferr/cmd/goiferr
 go get -u github.com/nsf/gocode
-go get -u github.com/peco/peco/cmd/peco
-go get -u github.com/rogpeppe/godef
-go get -u github.com/zmb3/gogetdoc
-go get -u golang.org/x/tools/cmd/cover
-go get -u golang.org/x/tools/cmd/godoc
-go get -u golang.org/x/tools/cmd/goimports
-go get -u golang.org/x/tools/cmd/gorename
-go get -u sourcegraph.com/sqs/goreturns
-
-go install github.com/Masterminds/glide
-go install github.com/aarzilli/gdlv
-go install github.com/alecthomas/gometalinter
-go install github.com/constabulary/gb/...
-go install github.com/cweill/gotests
-go install github.com/derekparker/delve/cmd/dlv
-go install github.com/garyburd/go-explorer/src/getool
-go install github.com/golang/lint/golint
-go install github.com/jstemmer/gotags
-go install github.com/kisielk/gotool
-go install github.com/mattn/jvgrep
-go install github.com/motemen/go-iferr/cmd/goiferr
-go install github.com/nsf/gocode
-go install github.com/peco/peco/cmd/peco
-go install github.com/rogpeppe/godef
-go install github.com/zmb3/gogetdoc
-go install golang.org/x/tools/cmd/cover
-go install golang.org/x/tools/cmd/godoc
-go install golang.org/x/tools/cmd/goimports
-go install golang.org/x/tools/cmd/gorename
-go install sourcegraph.com/sqs/goreturns
 
 $GOPATH/bin/gocode set autobuild true
 $GOPATH/bin/gocode set lib-path $GOPATH/pkg/darwin_amd64/
@@ -271,9 +228,9 @@ git clone https://github.com/yyuu/pyenv-pip-rehash.git $HOME/.anyenv/envs/pyenv/
 
 reload_anyenv
 
-$HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.12
-$HOME/.anyenv/envs/pyenv/bin/pyenv install 3.5.2
-$HOME/.anyenv/envs/pyenv/bin/pyenv global 2.7.12 3.5.2
+$HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.13
+$HOME/.anyenv/envs/pyenv/bin/pyenv install 3.6.0
+$HOME/.anyenv/envs/pyenv/bin/pyenv global 2.7.13 3.6.0
 
 reload_anyenv
 
@@ -317,8 +274,8 @@ $HOME/.anyenv/bin/anyenv install rbenv
 reload_anyenv
 
 $HOME/.anyenv/envs/rbenv/bin/rbenv install -l
-$HOME/.anyenv/envs/rbenv/bin/rbenv install 2.4.0-dev
-$HOME/.anyenv/envs/rbenv/bin/rbenv global 2.4.0-dev
+$HOME/.anyenv/envs/rbenv/bin/rbenv install 2.5.0-dev
+$HOME/.anyenv/envs/rbenv/bin/rbenv global 2.5.0-dev
 
 echo "$1" | sudo -S ln -sfv $HOME/.anyenv/envs/rbenv/shims/ruby /usr/bin/ruby
 
@@ -339,8 +296,8 @@ $HOME/.anyenv/bin/anyenv install ndenv
 reload_anyenv
 
 $HOME/.anyenv/envs/ndenv/bin/ndenv install -l
-$HOME/.anyenv/envs/ndenv/bin/ndenv install v7.2.0
-$HOME/.anyenv/envs/ndenv/bin/ndenv global v7.2.0
+$HOME/.anyenv/envs/ndenv/bin/ndenv install v7.5.0
+$HOME/.anyenv/envs/ndenv/bin/ndenv global v7.5.0
 
 reload_anyenv
 
@@ -351,16 +308,16 @@ $HOME/.anyenv/bin/anyenv install erlenv
 
 reload_anyenv
 
-wget http://www.erlang.org/download/otp_src_19.1.tar.gz
-tar zxf otp_src_19.1.tar.gz
-cd otp_src_19.1
-./configure --enable-dynamic-ssl-lib --with-ssl=/usr/local/opt/openssl --prefix=$HOME/.anyenv/envs/erlenv/releases/19.1
+wget http://www.erlang.org/download/otp_src_19.2.tar.gz
+tar zxf otp_src_19.2.tar.gz
+cd otp_src_19.2
+./configure --enable-dynamic-ssl-lib --with-ssl=/usr/local/opt/openssl --prefix=$HOME/.anyenv/envs/erlenv/releases/19.2
 make -j 4
 make install
 cd
-rm -rf otp_src_19.1*
+rm -rf otp_src_19.2*
 
-$HOME/.anyenv/envs/erlenv/bin/erlenv global 19.1
+$HOME/.anyenv/envs/erlenv/bin/erlenv global 19.2
 $HOME/.anyenv/envs/erlenv/bin/erlenv rehash
 
 reload_anyenv
@@ -383,8 +340,8 @@ $HOME/.anyenv/bin/anyenv install crenv
 reload_anyenv
 
 $HOME/.anyenv/envs/crenv/bin/crenv install -l
-$HOME/.anyenv/envs/crenv/bin/crenv install 0.20.0
-$HOME/.anyenv/envs/crenv/bin/crenv global 0.20.0
+$HOME/.anyenv/envs/crenv/bin/crenv install 0.20.5
+$HOME/.anyenv/envs/crenv/bin/crenv global 0.20.5
 $HOME/.anyenv/envs/crenv/bin/crenv rehash
 
 reload_anyenv
@@ -399,15 +356,15 @@ git clone git://github.com/mazgi/playenv.git $HOME/.anyenv/envs/playenv
 reload_anyenv
 
 $HOME/.anyenv/envs/sbtenv/bin/sbtenv install -l
-$HOME/.anyenv/envs/sbtenv/bin/sbtenv install sbt-0.13.12
-$HOME/.anyenv/envs/sbtenv/bin/sbtenv global sbt-0.13.12
+$HOME/.anyenv/envs/sbtenv/bin/sbtenv install sbt-0.13.13
+$HOME/.anyenv/envs/sbtenv/bin/sbtenv global sbt-0.13.13
 $HOME/.anyenv/envs/sbtenv/bin/sbtenv rehash
 
 reload_anyenv
 
 $HOME/.anyenv/envs/scalaenv/bin/scalaenv install -l
-$HOME/.anyenv/envs/scalaenv/bin/scalaenv install scala-2.12.0-M5
-$HOME/.anyenv/envs/scalaenv/bin/scalaenv global scala-2.12.0-M5
+$HOME/.anyenv/envs/scalaenv/bin/scalaenv install scala-2.12.1
+$HOME/.anyenv/envs/scalaenv/bin/scalaenv global scala-2.12.1
 $HOME/.anyenv/envs/scalaenv/bin/scalaenv rehash
 
 reload_anyenv
@@ -462,6 +419,7 @@ curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --prefix=/usr/local 
 
 nvim +UpdateRemotePlugins +PlugInstall +PlugUpdate +PlugUpgrade +PlugClean +GoInstallBinaries +GoUpdateBinaries +qall
 wget -P $HOME/.config/nvim/plugged/nvim-go/syntax/ https://raw.githubusercontent.com/fatih/vim-go/master/syntax/go.vim
+mv $HOME/.config/nvim/plugged/nvim-go/bin/nvim-go-darwin-amd64 $HOME/.config/nvim/plugged/nvim-go/bin/nvim-go
 
 brew_init
 
