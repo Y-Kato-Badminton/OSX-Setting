@@ -98,6 +98,9 @@ brew 'cloudfoundry/tap/cf-cli'
 brew 'dart-lang/dart/dart', args: ['devel', 'with-content-shell', 'with-dartium']
 brew 'homebrew/dupes/libiconv', args: ['universal']
 brew 'neovim/neovim/neovim', args: ['HEAD']
+brew 'libzip', args: ['universal']
+brew 'ideviceinstaller'
+brew 'ios-deploy'
 cask 'alfred'
 cask 'android-studio'
 cask 'appcleaner'
