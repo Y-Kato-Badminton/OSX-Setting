@@ -26,7 +26,7 @@ brew 'isl'
 brew 'mpfr'
 brew 'libmpc'
 brew 'gcc'
-brew 'libevent', args: ['HEAD']
+brew 'libevent'
 brew 'open-mpi', args: ['c++11', 'with-cxx-bindings', 'with-java', 'with-mpi-thread-multiple', 'without-fortran']
 brew 'boost', args: ['c++11', 'with-icu4c', 'with-mpi', 'without-single']
 brew 'ghc'
