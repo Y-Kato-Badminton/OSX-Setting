@@ -148,8 +148,6 @@ set_font() {
 
 set_font "Ricty" 13.5
 
-curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
-
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
@@ -192,6 +190,8 @@ brew link --force libxslt
 echo "$1" | sudo -S xcodebuild -license
 
 xcode-select --install
+
+curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
 vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
 
