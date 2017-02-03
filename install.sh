@@ -4,8 +4,6 @@ echo "$1" | sudo -S -v
 
 while true; do echo "$1" | sudo -S -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
-xcode-select --install
-
 echo "$1" | sudo -S pmset -a standbydelay 86400
 
 echo "$1" | sudo -S pmset -a hibernatemode 0
@@ -150,10 +148,6 @@ set_font() {
 
 set_font "Ricty" 13.5
 
-echo "$1" | sudo -S xcodebuild -license
-
-xcode-select --install
-
 curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -194,6 +188,10 @@ brew link --force bison
 brew link --force libxml2
 brew link --force libiconv
 brew link --force libxslt
+
+echo "$1" | sudo -S xcodebuild -license
+
+xcode-select --install
 
 vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
 
