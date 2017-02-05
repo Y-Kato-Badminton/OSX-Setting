@@ -20,6 +20,7 @@ brew 'gettext', args: ['universal']
 brew 'git', args: ['HEAD']
 brew 'openssl', args: ['universal']
 brew 'axel', args: ['HEAD']
+brew 'bdw-gc'
 brew 'bison'
 brew 'gmp', args: ['c++11']
 brew 'isl'
@@ -68,6 +69,7 @@ brew 'libimobiledevice'
 brew 'libzip', args: ['universal']
 brew 'ideviceinstaller'
 brew 'ios-deploy'
+brew 'jemalloc'
 brew 'jetty'
 brew 'oniguruma'
 brew 'jq'
@@ -116,6 +118,7 @@ brew 'dart-lang/dart/dart', args: ['devel', 'with-content-shell', 'with-dartium'
 brew 'homebrew/dupes/libiconv', args: ['universal']
 brew 'neovim/neovim/neovim', args: ['HEAD']
 cask 'alfred'
+cask 'android-file-transfer'
 cask 'android-studio'
 cask 'appcleaner'
 cask 'appcode'
