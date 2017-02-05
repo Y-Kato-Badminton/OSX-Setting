@@ -191,6 +191,8 @@ echo "$1" | sudo -S xcodebuild -license
 
 xcode-select --install
 
+brew bundle
+
 curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
 vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
