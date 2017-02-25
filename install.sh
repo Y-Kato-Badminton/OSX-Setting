@@ -179,6 +179,21 @@ reload_anyenv() {
     fi
 }
 
+nvim-install(){
+    sudo rm -rf $HOME/neovim
+    sudo rm -rf /usr/local/bin/nvim
+    sudo rm -rf /usr/local/share/nvim
+    cd $HOME
+    git clone https://github.com/neovim/neovim
+    cd neovim
+    rm -r build/
+    make clean
+    make CMAKE_BUILD_TYPE=RelWithDebInfo
+    sudo make install
+    cd ../
+    rm -rf neovim
+}
+
 brew bundle
 brew link --force openssl
 brew link --force readline
@@ -192,6 +207,8 @@ echo "$1" | sudo -S xcodebuild -license
 xcode-select --install
 
 brew bundle
+
+nvim-install
 
 curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
@@ -228,8 +245,8 @@ git clone https://github.com/yyuu/pyenv-pip-rehash.git $HOME/.anyenv/envs/pyenv/
 
 reload_anyenv
 
-$HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.13
-$HOME/.anyenv/envs/pyenv/bin/pyenv install 3.6.0
+PYTHON_CONFIGURE_OPTS="--enable-framewok" $HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.13
+PYTHON_CONFIGURE_OPTS="--enable-framewok" $HOME/.anyenv/envs/pyenv/bin/pyenv install 3.6.0
 $HOME/.anyenv/envs/pyenv/bin/pyenv global 2.7.13 3.6.0
 
 reload_anyenv
