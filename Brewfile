@@ -7,7 +7,6 @@ tap 'homebrew/core'
 tap 'homebrew/dupes'
 tap 'homebrew/services'
 tap 'homebrew/versions'
-tap 'neovim/neovim'
 cask 'java'
 cask 'xquartz'
 brew 'android-sdk'
@@ -92,7 +91,6 @@ brew 'mercurial'
 brew 'msgpack'
 brew 'nkf'
 brew 'opam'
-brew 'pacvim'
 brew 'pcre', args: ['universal']
 brew 'pkg-config'
 brew 'protobuf'
@@ -116,7 +114,6 @@ brew 'zsh'
 brew 'cloudfoundry/tap/cf-cli'
 brew 'dart-lang/dart/dart', args: ['devel', 'with-content-shell', 'with-dartium']
 brew 'homebrew/dupes/libiconv', args: ['universal']
-brew 'neovim/neovim/neovim', args: ['HEAD']
 cask 'alfred'
 cask 'android-file-transfer'
 cask 'android-studio'
