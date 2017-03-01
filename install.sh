@@ -305,6 +305,7 @@ $HOME/.anyenv/envs/rbenv/shims/gem install compass --no-rdoc --no-ri
 $HOME/.anyenv/envs/rbenv/shims/gem install nokogiri --no-rdoc --no-ri -- --use-system-libraries --with-iconv-dir="$(brew --prefix libiconv)" --with-xml2-config="$(brew --prefix libxml2)/bin/xml2-config" --with-xslt-config="$(brew --prefix libxslt)/bin/xslt-config"
 $HOME/.anyenv/envs/rbenv/shims/gem install rails --no-rdoc --no-ri
 $HOME/.anyenv/envs/rbenv/shims/gem install cocoapods --pre --no-rdoc --no-ri
+$HOME/.anyenv/envs/rbenv/shims/gem install neovim --no-rdoc --no-ri
 $HOME/.anyenv/envs/rbenv/shims/gem update --no-rdoc --no-ri
 
 # node設定
