@@ -245,8 +245,8 @@ git clone https://github.com/yyuu/pyenv-pip-rehash.git $HOME/.anyenv/envs/pyenv/
 
 reload_anyenv
 
-PYTHON_CONFIGURE_OPTS="--enable-framewok" $HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.13
-PYTHON_CONFIGURE_OPTS="--enable-framewok" $HOME/.anyenv/envs/pyenv/bin/pyenv install 3.6.0
+PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.13
+PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 3.6.0
 $HOME/.anyenv/envs/pyenv/bin/pyenv global 2.7.13 3.6.0
 
 reload_anyenv
