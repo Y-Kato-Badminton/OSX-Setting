@@ -208,8 +208,6 @@ xcode-select --install
 
 brew bundle
 
-nvim-install
-
 curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
 vboxmanage setproperty machinefolder $HOME/Documents/vagrant/VirtualBox VMs
@@ -434,14 +432,33 @@ curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --prefix=/usr/local 
 /usr/local/bin/cargo install --git https://github.com/rust-lang-nursery/rustfmt
 /usr/local/bin/cargo install ripgrep
 
+# install Neovim
 
+echo "$1" | sudo -S rm -rf $HOME/neovim
+echo "$1" | sudo -S rm -rf /usr/local/bin/nvim
+echo "$1" | sudo -S rm -rf /usr/local/share/nvim
+rm -rf "$HOME/.config/gocode";
+rm -rf "$HOME/.config/nvim/autoload";
+rm -rf "$HOME/.config/nvim/ftplugin";
+rm -rf "$HOME/.config/nvim/log";
+rm -rf "$HOME/.config/nvim/plugged";
+rm "$HOME/.nvimlog";
+rm "$HOME/.viminfo";
+cd $HOME
+git clone https://github.com/neovim/neovim
+cd neovim
+rm -r build
+make clean
+make CMAKE_BUILD_TYPE=RelWithDebInfo
+secho "$1" | sudo -S make install
+cd ..
+rm -rf neovim
 nvim +UpdateRemotePlugins +PlugInstall +PlugUpdate +PlugUpgrade +PlugClean +GoInstallBinaries +GoUpdateBinaries +qall
-wget -P $HOME/.config/nvim/plugged/nvim-go/syntax/ https://raw.githubusercontent.com/fatih/vim-go/master/syntax/go.vim
-mv $HOME/.config/nvim/plugged/nvim-go/bin/nvim-go-darwin-amd64 $HOME/.config/nvim/plugged/nvim-go/bin/nvim-go
+wget -P "$HOME/.config/nvim/plugged/nvim-go/syntax/" https://raw.githubusercontent.com/fatih/vim-go/master/syntax/go.vim;
+mv "$HOME/.config/nvim/plugged/nvim-go/bin/nvim-go-$GOOS-$GOARCH" "$HOME/.config/nvim/plugged/nvim-go/bin/nvim-go";
+
 
 brew_init
-
-#apm install --packages-file ./packages.list
 
 git config --global user.name "$(whoami)"
 git config --global user.email "$(whoami)@gmail.com"
