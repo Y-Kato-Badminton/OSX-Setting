@@ -112,7 +112,7 @@ brew 'wxmac', args: ['universal', 'with-static', 'with-stl']
 brew 'zsh'
 brew 'cloudfoundry/tap/cf-cli'
 brew 'dart-lang/dart/dart', args: ['devel', 'with-content-shell', 'with-dartium']
-brew 'homebrew/dupes/libiconv', args: ['universal']
+brew 'libiconv', args: ['universal']
 cask 'alfred'
 cask 'android-file-transfer'
 cask 'android-sdk'
