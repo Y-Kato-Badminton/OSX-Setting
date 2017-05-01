@@ -317,7 +317,7 @@ $HOME/.anyenv/envs/ndenv/bin/ndenv global v7.5.0
 
 reload_anyenv
 
-$HOME/.anyenv/envs/ndenv/shims/npm install -g less jsctags jshint htmlhint js-beautify eslint eslint_d babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y source-map-support webpack csslint stylelint
+$HOME/.anyenv/envs/ndenv/shims/npm install -g less jsctags jshint htmlhint js-beautify eslint eslint_d babel-eslint eslint-config-airbnb eslint-plugin-import eslint-plugin-react eslint-plugin-jsx-a11y source-map-support webpack csslint stylelint pug-cli
 # Erlang設定
 
 $HOME/.anyenv/bin/anyenv install erlenv
