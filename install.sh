@@ -244,17 +244,17 @@ git clone https://github.com/yyuu/pyenv-pip-rehash.git $HOME/.anyenv/envs/pyenv/
 reload_anyenv
 
 PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.13
-PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 3.6.0
-$HOME/.anyenv/envs/pyenv/bin/pyenv global 2.7.13 3.6.0
+PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 3.7-dev
+$HOME/.anyenv/envs/pyenv/bin/pyenv global 2.7.13 3.7-dev
 
 reload_anyenv
 
 $HOME/.anyenv/envs/pyenv/shims/pip install --upgrade pip;
 $HOME/.anyenv/envs/pyenv/shims/pip2 install --upgrade pip;
 $HOME/.anyenv/envs/pyenv/shims/pip3 install --upgrade pip;
-$HOME/.anyenv/envs/pyenv/shims/pip install --upgrade websocket-client sexpdata neovim vim-vint
-$HOME/.anyenv/envs/pyenv/shims/pip2 install --upgrade websocket-client sexpdata neovim vim-vint
-$HOME/.anyenv/envs/pyenv/shims/pip3 install --upgrade websocket-client sexpdata neovim vim-vint
+$HOME/.anyenv/envs/pyenv/shims/pip install --upgrade websocket-client sexpdata neovim vim-vint conan
+$HOME/.anyenv/envs/pyenv/shims/pip2 install --upgrade websocket-client sexpdata neovim vim-vint conan
+$HOME/.anyenv/envs/pyenv/shims/pip3 install --upgrade websocket-client sexpdata neovim vim-vint conan
 
 echo "$1" | sudo -S pip install git+https://github.com/idcf/cloudstack-api
 
@@ -312,8 +312,8 @@ $HOME/.anyenv/bin/anyenv install ndenv
 reload_anyenv
 
 $HOME/.anyenv/envs/ndenv/bin/ndenv install -l
-$HOME/.anyenv/envs/ndenv/bin/ndenv install v7.5.0
-$HOME/.anyenv/envs/ndenv/bin/ndenv global v7.5.0
+$HOME/.anyenv/envs/ndenv/bin/ndenv install v7.10.0
+$HOME/.anyenv/envs/ndenv/bin/ndenv global v7.10.0
 
 reload_anyenv
 
@@ -324,16 +324,16 @@ $HOME/.anyenv/bin/anyenv install erlenv
 
 reload_anyenv
 
-wget http://www.erlang.org/download/otp_src_19.2.tar.gz
-tar zxf otp_src_19.2.tar.gz
-cd otp_src_19.2
-./configure --enable-dynamic-ssl-lib --with-ssl=/usr/local/opt/openssl --prefix=$HOME/.anyenv/envs/erlenv/releases/19.2
+wget http://www.erlang.org/download/otp_src_19.3.tar.gz
+tar zxf otp_src_19.3.tar.gz
+cd otp_src_19.3
+./configure --enable-dynamic-ssl-lib --with-ssl=/usr/local/opt/openssl --prefix=$HOME/.anyenv/envs/erlenv/releases/19.3
 make -j 4
 make install
 cd
-rm -rf otp_src_19.2*
+rm -rf otp_src_19.3*
 
-$HOME/.anyenv/envs/erlenv/bin/erlenv global 19.2
+$HOME/.anyenv/envs/erlenv/bin/erlenv global 19.3
 $HOME/.anyenv/envs/erlenv/bin/erlenv rehash
 
 reload_anyenv
@@ -356,8 +356,8 @@ $HOME/.anyenv/bin/anyenv install crenv
 reload_anyenv
 
 $HOME/.anyenv/envs/crenv/bin/crenv install -l
-$HOME/.anyenv/envs/crenv/bin/crenv install 0.20.5
-$HOME/.anyenv/envs/crenv/bin/crenv global 0.20.5
+$HOME/.anyenv/envs/crenv/bin/crenv install 0.22.0
+$HOME/.anyenv/envs/crenv/bin/crenv global 0.22.0
 $HOME/.anyenv/envs/crenv/bin/crenv rehash
 
 reload_anyenv
@@ -379,8 +379,8 @@ $HOME/.anyenv/envs/sbtenv/bin/sbtenv rehash
 reload_anyenv
 
 $HOME/.anyenv/envs/scalaenv/bin/scalaenv install -l
-$HOME/.anyenv/envs/scalaenv/bin/scalaenv install scala-2.12.1
-$HOME/.anyenv/envs/scalaenv/bin/scalaenv global scala-2.12.1
+$HOME/.anyenv/envs/scalaenv/bin/scalaenv install scala-2.13.0-M1
+$HOME/.anyenv/envs/scalaenv/bin/scalaenv global scala-2.13.0-M1
 $HOME/.anyenv/envs/scalaenv/bin/scalaenv rehash
 
 reload_anyenv
