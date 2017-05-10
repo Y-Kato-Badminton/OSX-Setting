@@ -179,21 +179,6 @@ reload_anyenv() {
     fi
 }
 
-nvim-install(){
-    sudo rm -rf $HOME/neovim
-    sudo rm -rf /usr/local/bin/nvim
-    sudo rm -rf /usr/local/share/nvim
-    cd $HOME
-    git clone https://github.com/neovim/neovim
-    cd neovim
-    rm -r build/
-    make clean
-    make CMAKE_BUILD_TYPE=RelWithDebInfo
-    sudo make install
-    cd ../
-    rm -rf neovim
-}
-
 brew bundle
 brew link --force openssl
 brew link --force readline
