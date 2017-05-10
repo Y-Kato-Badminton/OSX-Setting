@@ -179,6 +179,9 @@ reload_anyenv() {
     fi
 }
 
+echo "$1" | sudo -S xcodebuild -license
+xcode-select --install
+
 brew bundle
 brew link --force openssl
 brew link --force readline
@@ -186,12 +189,6 @@ brew link --force bison
 brew link --force libxml2
 brew link --force libiconv
 brew link --force libxslt
-
-echo "$1" | sudo -S xcodebuild -license
-
-xcode-select --install
-
-brew bundle
 
 curl -fsSL https://raw.github.com/supermarin/Alcatraz/master/Scripts/install.sh | sh
 
