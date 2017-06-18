@@ -16,7 +16,7 @@ echo "$1" | sudo -S mkdir -p /usr/local
 echo "$1" | sudo -S pmset -a sms 0
 
 echo "$1" | sudo -S nvram SystemAudioVolume=" "
-
+defaults write NSGlobalDomain KeyRepeat -int 0
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 echo "$1" | sudo -S defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
