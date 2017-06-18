@@ -20,6 +20,7 @@ echo "$1" | sudo -S nvram SystemAudioVolume=" "
 defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 echo "$1" | sudo -S defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+defaults write com.apple.finder DisableAllAnimations -bool true
 
 defaults write com.apple.menuextra.battery ShowPercent -string "YES"
 defaults write com.apple.menuextra.battery ShowTime -string "YES"
