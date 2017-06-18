@@ -82,6 +82,8 @@ echo "$1" | sudo -S defaults write /Library/Preferences/com.apple.windowserver D
 
 defaults write -g QLPanelAnimationDuration -float 0
 
+defaults write com.apple.dock autohide-time-modifier -float 0
+
 defaults write com.apple.dock launchanim -bool false
 
 defaults write com.apple.dock expose-animation-duration -float 0.1
