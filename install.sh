@@ -5,116 +5,77 @@ echo "$1" | sudo -S -v
 while true; do echo "$1" | sudo -S -n true; sleep 60; kill -0 "$$" || exit; done 2>/dev/null &
 
 echo "$1" | sudo -S pmset -a standbydelay 86400
-
 echo "$1" | sudo -S pmset -a hibernatemode 0
 echo "$1" | sudo -S rm /private/var/vm/sleepimage
 echo "$1" | sudo -S touch /private/var/vm/sleepimage
 echo "$1" | sudo -S chflags uchg /private/var/vm/sleepimage
 echo "$1" | sudo -S mkdir -p /usr/local
-
 # Disable the sudden motion sensor as it’s not useful for SSDs
 echo "$1" | sudo -S pmset -a sms 0
-
 echo "$1" | sudo -S nvram SystemAudioVolume=" "
-defaults write NSGlobalDomain KeyRepeat -int 0
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
-
+echo "$1" | sudo -S chflags nohidden ~/Library
+echo "$1" | sudo -S defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+echo "$1" | sudo -S defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
+echo "$1" | sudo -S defaults write -g InitialKeyRepeat -int 13
+echo "$1" | sudo -S defaults write -g KeyRepeat -int 1
+echo "$1" | sudo -S defaults write -g QLPanelAnimationDuration -float 0
 echo "$1" | sudo -S defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
-defaults write com.apple.finder DisableAllAnimations -bool true
-
-defaults write com.apple.menuextra.battery ShowPercent -string "YES"
-defaults write com.apple.menuextra.battery ShowTime -string "YES"
-defaults write com.apple.menuextra.clock 'DateFormat' -string 'EEE H:mm'
-
-defaults write com.apple.LaunchServices LSQuarantine -bool false
-defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
-
-defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
-defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
-defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
-
-defaults write com.apple.finder NewWindowTarget -string "PfDe"
-defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
-
-defaults write com.apple.finder ShowStatusBar -bool true
-
-defaults write com.apple.finder ShowPathbar -bool true
-
-defaults write com.apple.finder ShowTabView -bool true
-
-chflags nohidden ~/Library
-
-defaults write com.apple.finder AppleShowAllFiles YES
-
-echo "$1" | sudo -S systemsetup -setrestartfreeze on
-
-echo "$1" | sudo -S systemsetup -setcomputersleep Off > /dev/null
-
-defaults write com.apple.desktopservices DSDontWriteNetworkStores true
-
-defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
-
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 1
-
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-defaults write com.apple.dock orientation -string "right"
-
-defaults write com.apple.dock autohide -bool true
-
-defaults write -g InitialKeyRepeat -int 13
-defaults write -g KeyRepeat -int 1
-
-defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-defaults write com.apple.screensaver askForPassword -int 1
-defaults write com.apple.screensaver askForPasswordDelay -int 0
-
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
-defaults write com.apple.screencapture type -string "png"
-
-defaults write com.apple.screencapture disable-shadow -bool true
-
-defaults write NSGlobalDomain AppleFontSmoothing -int 2
-
 echo "$1" | sudo -S defaults write /Library/Preferences/com.apple.windowserver DisplayResolutionEnabled -bool true
-
-defaults write -g QLPanelAnimationDuration -float 0
-
-defaults write com.apple.dock autohide-time-modifier -float 0
-
-defaults write com.apple.dock launchanim -bool false
-
-defaults write com.apple.dock expose-animation-duration -float 0.1
-
-defaults write com.apple.Dock autohide-delay -float 0
-
-defaults write com.apple.mail DisableReplyAnimations -bool true
-defaults write com.apple.mail DisableSendAnimations -bool true
-
-defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
-
-defaults write com.apple.appstore WebKitDeveloperExtras -bool true
-
-defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
-
-defaults write com.apple.terminal StringEncodings -array 4
-
-defaults write com.apple.Safari UniversalSearchEnabled -bool false
-defaults write com.apple.Safari SuppressSearchSuggestions -bool true
-defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
-defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
-defaults write com.apple.Safari HomePage -string "about:blank"
-defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
-defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
-defaults write com.apple.Safari IncludeDevelopMenu -bool true
-defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
-defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
-defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+echo "$1" | sudo -S defaults write NSGlobalDomain AppleFontSmoothing -int 2
+echo "$1" | sudo -S defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+echo "$1" | sudo -S defaults write NSGlobalDomain KeyRepeat -int 0
+echo "$1" | sudo -S defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
+echo "$1" | sudo -S defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
+echo "$1" | sudo -S defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
+echo "$1" | sudo -S defaults write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+echo "$1" | sudo -S defaults write com.apple.ActivityMonitor OpenMainWindow -bool true
+echo "$1" | sudo -S defaults write com.apple.Dock autohide-delay -float 0
+echo "$1" | sudo -S defaults write com.apple.LaunchServices LSQuarantine -bool false
+echo "$1" | sudo -S defaults write com.apple.Safari AutoOpenSafeDownloads -bool false
+echo "$1" | sudo -S defaults write com.apple.Safari HomePage -string "about:blank"
+echo "$1" | sudo -S defaults write com.apple.Safari IncludeDevelopMenu -bool true
+echo "$1" | sudo -S defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
+echo "$1" | sudo -S defaults write com.apple.Safari ShowFullURLInSmartSearchField -bool true
+echo "$1" | sudo -S defaults write com.apple.Safari SuppressSearchSuggestions -bool true
+echo "$1" | sudo -S defaults write com.apple.Safari UniversalSearchEnabled -bool false
+echo "$1" | sudo -S defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool true
+echo "$1" | sudo -S defaults write com.apple.Safari WebKitInitialTimedLayoutDelay 0.25
+echo "$1" | sudo -S defaults write com.apple.Safari WebKitTabToLinksPreferenceKey -bool true
+echo "$1" | sudo -S defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2BackspaceKeyNavigationEnabled -bool true
+echo "$1" | sudo -S defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled -bool true
+echo "$1" | sudo -S defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebKit2TabsToLinks -bool true
+echo "$1" | sudo -S defaults write com.apple.appstore WebKitDeveloperExtras -bool true
+echo "$1" | sudo -S defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+echo "$1" | sudo -S defaults write com.apple.dock autohide -bool true
+echo "$1" | sudo -S defaults write com.apple.dock autohide-time-modifier -float 0
+echo "$1" | sudo -S defaults write com.apple.dock expose-animation-duration -float 0.1
+echo "$1" | sudo -S defaults write com.apple.dock launchanim -bool false
+echo "$1" | sudo -S defaults write com.apple.dock orientation -string "right"
+echo "$1" | sudo -S defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -int 1
+echo "$1" | sudo -S defaults write com.apple.finder AppleShowAllFiles YES
+echo "$1" | sudo -S defaults write com.apple.finder DisableAllAnimations -bool true
+echo "$1" | sudo -S defaults write com.apple.finder NewWindowTarget -string "PfDe"
+echo "$1" | sudo -S defaults write com.apple.finder NewWindowTargetPath -string "file://${HOME}/"
+echo "$1" | sudo -S defaults write com.apple.finder OpenWindowForNewRemovableDisk -bool true
+echo "$1" | sudo -S defaults write com.apple.finder ShowPathbar -bool true
+echo "$1" | sudo -S defaults write com.apple.finder ShowStatusBar -bool true
+echo "$1" | sudo -S defaults write com.apple.finder ShowTabView -bool true
+echo "$1" | sudo -S defaults write com.apple.frameworks.diskimages auto-open-ro-root -bool true
+echo "$1" | sudo -S defaults write com.apple.frameworks.diskimages auto-open-rw-root -bool true
+echo "$1" | sudo -S defaults write com.apple.mail DisableReplyAnimations -bool true
+echo "$1" | sudo -S defaults write com.apple.mail DisableSendAnimations -bool true
+echo "$1" | sudo -S defaults write com.apple.menuextra.battery ShowPercent -string "YES"
+echo "$1" | sudo -S defaults write com.apple.menuextra.battery ShowTime -string "YES"
+echo "$1" | sudo -S defaults write com.apple.menuextra.clock 'DateFormat' -string 'EEE H:mm'
+echo "$1" | sudo -S defaults write com.apple.print.PrintingPrefs "Quit When Finished" -bool true
+echo "$1" | sudo -S defaults write com.apple.screencapture disable-shadow -bool true
+echo "$1" | sudo -S defaults write com.apple.screencapture location -string "${HOME}/Desktop"
+echo "$1" | sudo -S defaults write com.apple.screencapture type -string "png"
+echo "$1" | sudo -S defaults write com.apple.screensaver askForPassword -int 1
+echo "$1" | sudo -S defaults write com.apple.screensaver askForPasswordDelay -int 0
+echo "$1" | sudo -S defaults write com.apple.terminal StringEncodings -array 4
+echo "$1" | sudo -S systemsetup -setcomputersleep Off > /dev/null
+echo "$1" | sudo -S systemsetup -setrestartfreeze on
 
 killall Dock
 
