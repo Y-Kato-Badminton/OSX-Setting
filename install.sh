@@ -378,6 +378,7 @@ curl -sSf https://static.rust-lang.org/rustup.sh | sh -s -- --prefix=/usr/local 
 /usr/local/bin/cargo install --git https://github.com/rust-lang-nursery/rustfmt
 /usr/local/bin/cargo install ripgrep
 /usr/local/bin/cargo install --no-default-features --git https://github.com/ogham/exa
+/usr/local/bin/cargo install --no-default-features --git https://github.com/sharkdp/fd
 
 # install Neovim
 
