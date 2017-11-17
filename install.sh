@@ -189,9 +189,9 @@ git clone https://github.com/yyuu/pyenv-pip-rehash.git $HOME/.anyenv/envs/pyenv/
 
 reload_anyenv
 
-PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.13
-PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 3.7-dev
-$HOME/.anyenv/envs/pyenv/bin/pyenv global 2.7.13 3.7-dev
+PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 2.7.14
+PYTHON_CONFIGURE_OPTS="--enable-framework" $HOME/.anyenv/envs/pyenv/bin/pyenv install 3.7.0a2
+$HOME/.anyenv/envs/pyenv/bin/pyenv global 2.7.14 3.7.0a2
 
 reload_anyenv
 
@@ -235,8 +235,8 @@ $HOME/.anyenv/bin/anyenv install rbenv
 reload_anyenv
 
 $HOME/.anyenv/envs/rbenv/bin/rbenv install -l
-$HOME/.anyenv/envs/rbenv/bin/rbenv install 2.5.0-dev
-$HOME/.anyenv/envs/rbenv/bin/rbenv global 2.5.0-dev
+$HOME/.anyenv/envs/rbenv/bin/rbenv install 2.5.0-preview1
+$HOME/.anyenv/envs/rbenv/bin/rbenv global 2.5.0-preview1
 
 echo "$1" | sudo -S ln -sfv $HOME/.anyenv/envs/rbenv/shims/ruby /usr/bin/ruby
 
@@ -258,8 +258,8 @@ $HOME/.anyenv/bin/anyenv install ndenv
 reload_anyenv
 
 $HOME/.anyenv/envs/ndenv/bin/ndenv install -l
-$HOME/.anyenv/envs/ndenv/bin/ndenv install v7.10.0
-$HOME/.anyenv/envs/ndenv/bin/ndenv global v7.10.0
+$HOME/.anyenv/envs/ndenv/bin/ndenv install v9.2.0
+$HOME/.anyenv/envs/ndenv/bin/ndenv global v9.2.0
 
 reload_anyenv
 
@@ -302,8 +302,8 @@ $HOME/.anyenv/bin/anyenv install crenv
 reload_anyenv
 
 $HOME/.anyenv/envs/crenv/bin/crenv install -l
-$HOME/.anyenv/envs/crenv/bin/crenv install 0.22.0
-$HOME/.anyenv/envs/crenv/bin/crenv global 0.22.0
+$HOME/.anyenv/envs/crenv/bin/crenv install 0.23.1
+$HOME/.anyenv/envs/crenv/bin/crenv global 0.23.1
 $HOME/.anyenv/envs/crenv/bin/crenv rehash
 
 reload_anyenv
@@ -318,15 +318,15 @@ git clone git://github.com/mazgi/playenv.git $HOME/.anyenv/envs/playenv
 reload_anyenv
 
 $HOME/.anyenv/envs/sbtenv/bin/sbtenv install -l
-$HOME/.anyenv/envs/sbtenv/bin/sbtenv install sbt-0.13.13
-$HOME/.anyenv/envs/sbtenv/bin/sbtenv global sbt-0.13.13
+$HOME/.anyenv/envs/sbtenv/bin/sbtenv install sbt-1.0.3
+$HOME/.anyenv/envs/sbtenv/bin/sbtenv global sbt-1.0.3
 $HOME/.anyenv/envs/sbtenv/bin/sbtenv rehash
 
 reload_anyenv
 
 $HOME/.anyenv/envs/scalaenv/bin/scalaenv install -l
-$HOME/.anyenv/envs/scalaenv/bin/scalaenv install scala-2.13.0-M1
-$HOME/.anyenv/envs/scalaenv/bin/scalaenv global scala-2.13.0-M1
+$HOME/.anyenv/envs/scalaenv/bin/scalaenv install scala-2.13.0-M2
+$HOME/.anyenv/envs/scalaenv/bin/scalaenv global scala-2.13.0-M2
 $HOME/.anyenv/envs/scalaenv/bin/scalaenv rehash
 
 reload_anyenv
@@ -397,13 +397,11 @@ git clone https://github.com/neovim/neovim
 cd neovim
 rm -r build
 make clean
-make CMAKE_BUILD_TYPE=RelWithDebInfo
+make CMAKE_BUILD_TYPE=Release
 secho "$1" | sudo -S make install
 cd ..
 rm -rf neovim
 nvim +UpdateRemotePlugins +PlugInstall +PlugUpdate +PlugUpgrade +PlugClean +GoInstallBinaries +GoUpdateBinaries +qall
-wget -P "$HOME/.config/nvim/plugged/nvim-go/syntax/" https://raw.githubusercontent.com/fatih/vim-go/master/syntax/go.vim;
-mv "$HOME/.config/nvim/plugged/nvim-go/bin/nvim-go-$GOOS-$GOARCH" "$HOME/.config/nvim/plugged/nvim-go/bin/nvim-go";
 
 
 brew_init
